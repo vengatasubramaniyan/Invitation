@@ -658,6 +658,39 @@ header.hero .vow { color:#75412a !important; -webkit-text-fill-color:#75412a !im
 header.hero .date-line { font-weight:600 !important; letter-spacing:.18em !important; }
 header.hero .scroll-cue { color:#75412a !important; }
 header.hero .scroll-cue .arrow { border-color:#75412a !important; }
+
+
+/* FINAL LAYOUT ADJUSTMENT: slightly wider cream center panel so invitation text stays on it */
+body, body::before {
+  background: linear-gradient(90deg,
+    #d88908 0%, #d88908 3%,
+    #f3e3be 3%, #f3e3be 97%,
+    #d88908 97%, #d88908 100%) !important;
+}
+.invite::before {
+  left: 3% !important;
+  width: 94% !important;
+  background: #f3e3be !important;
+}
+.invite {
+  box-sizing: border-box;
+  padding-left: clamp(14px, 4vw, 22px) !important;
+  padding-right: clamp(14px, 4vw, 22px) !important;
+}
+.invite .wrap {
+  width: 100%;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+.invite .hero, .invite .section {
+  box-sizing: border-box;
+  min-width: 0;
+}
+.invite img, .invite svg {
+  max-width: 100%;
+}
 </style>
 </head>
 <body>
@@ -985,5 +1018,3 @@ header.hero .scroll-cue .arrow { border-color:#75412a !important; }
 </script>
 </body>
 </html>
-
-
