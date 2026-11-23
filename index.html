@@ -691,6 +691,55 @@ body, body::before {
 .invite img, .invite svg {
   max-width: 100%;
 }
+
+
+/* FINAL OPENED-PAGE CLEANUP: one cream surface, with no contrasting borders */
+body.opened,
+body.opened #invite,
+body.opened .invite,
+body.opened .invite * {
+  background-color: #f3e3be !important;
+  background-image: none !important;
+  border-color: #f3e3be !important;
+  outline-color: #f3e3be !important;
+  box-shadow: none !important;
+}
+body.opened {
+  background: #f3e3be !important;
+  background-image: none !important;
+}
+body.opened::before,
+body.opened .invite::before,
+body.opened #invite::before {
+  content: none !important;
+  display: none !important;
+}
+/* Remove decorative frames/corners that can look like a second-colour outline. */
+body.opened .venue-frame,
+body.opened .venue-frame img,
+body.opened .card,
+body.opened .unit,
+body.opened .venue-frame,
+body.opened .vcorner {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+body.opened .vcorner { display: none !important; }
+/* Keep the venue photograph and its caption readable; retain button fills. */
+body.opened .venue-frame img { background: transparent !important; }
+body.opened .venue-cap,
+body.opened .venue-cap * {
+  background-color: transparent !important;
+  color: #fff7f2 !important;
+  -webkit-text-fill-color: #fff7f2 !important;
+}
+body.opened .btn-primary {
+  background: #8b3d18 !important;
+  color: #fff7f2 !important;
+  -webkit-text-fill-color: #fff7f2 !important;
+}
+
 </style>
 </head>
 <body>
